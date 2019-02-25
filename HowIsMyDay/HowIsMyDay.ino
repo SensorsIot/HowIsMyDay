@@ -264,9 +264,9 @@ void setup() {
       }  while (weather[0] == 'E');
       decodeWeather(weather);
 
-      for (int i = 0; i < 8 ; i++) {
-        if (timeUTC[i] > (morningHour) && timeUTC[i] <= morningHour + 3) morningNumber = i;
-        if (timeUTC[i] > (eveningHour) && timeUTC[i] <= eveningHour + 3) eveningNumber = i;
+      for (int i = 0; i < 8 ; i++) {   
+          if (timeUTC[i] >= morningHour && timeUTC[i] < morningHour + 3) morningNumber = i;
+          if (timeUTC[i] >= eveningHour && timeUTC[i] < eveningHour + 3) eveningNumber = i;
       }
 
       Serial.print("morningNumber ");
