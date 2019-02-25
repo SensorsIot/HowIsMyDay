@@ -221,7 +221,6 @@ void setup() {
     strip.show(); // Initialize all pixels to 'off'
 
     float battVoltage = analogRead(A0) / 232.6;
-    battVoltage = 3.4;
     Serial.print("BattVoltage ");
     Serial.println(battVoltage);
 
